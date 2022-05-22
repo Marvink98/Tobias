@@ -1,3 +1,10 @@
+/*
+Java Skript HSV Uhr und Darkmode für HSV Seite
+Autor: Gruppe 3 
+Erstellt: 07.05.2022
+Zuletzt geändert: 22.05.2022
+*/
+
 //Fordert saubere Programmierung. Dadurch hat kein Browser Probleme
 'use strict'
 

@@ -1,3 +1,9 @@
+/*
+Java Skript für Darkmode und Echtzeituhr
+Autor: Gruppe 3 
+Erstellt: 09.04.2022
+Zuletzt geändert: 22.05.2022
+*/
 //Fordert saubere Programmierung. Dadurch hat kein Browser Probleme
 'use strict'
 

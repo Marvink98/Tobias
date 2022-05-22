@@ -1,3 +1,9 @@
+<!--
+Website mit Darstellung von drei Zufälligen Musikstücken aus der Datenbank nach Genres geordnet
+Autor: Gruppe 3 
+Erstellt: 14.05.2022
+Zuletzt geändert: 22.05.2022
+-->
 <!DOCTYPE html>
 <html lang="en">
 <!-- Metadaten der Website -->
@@ -135,7 +141,9 @@
         <img class="projekt-image" src="doc/Musik.jpg">
     </div>
 <!--Implementieren des JavaSkriptes  -->    
-    <script src="musik.js"></script>
+    <script src="musik.js"></script> Kann das raus?? in der JS stand nichts drin deswegen gelöscht
     <script src="app.js"></script>
 </body>
 </html>
+
+<!-- https://www.pexels.com/de-de/foto/stapel-musiknoten-auf-weissem-textil-210854/ -->
