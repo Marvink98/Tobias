@@ -41,7 +41,6 @@
     size: 100%;
 }
 
-
 .maps-frame{
     border: 0;
     height: 350px;
@@ -143,5 +142,3 @@ body{
 }
 /* Entfernen des Rahmens um den Dark-Mode-Button */
 .btn:focus { outline-style: none; }
-
-

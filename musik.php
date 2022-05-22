@@ -2,6 +2,11 @@
 <html lang="en">
 <!-- Metadaten der Website -->
 <head>
+    <style>
+        table {border: 1px solid;}
+        td {border: 1px solid;}
+        th {border: 1px solid;}
+    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,6 +53,7 @@
                     class="button" value="Techno" />
         </form>
     </div>
+<!-- Tabelle anlegen -->
     <div class="tabelle">
         <table>
             <tr>
@@ -60,6 +66,7 @@
             <td>Aufrufe bei Youtube*</td>
             <td>Likes bei Youtube*</td>
             </tr>
+<!-- Handling des Button + Aufruf der sqlData Funktion mit Genre als Übergabeparameter -->
         <?php
         $button = "Metal";
 
@@ -81,7 +88,7 @@
             else if(array_key_exists('button6', $_POST)) {
                 sqlData("Techno");
             }
-
+//Funktion, die die Daten aus der Datenbank zieht
             function sqlData($button)
             {
                 $servername = "localhost";
@@ -95,27 +102,23 @@
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
-
+//Select Befehl
                 $sql = "SELECT * FROM `youtube-musikdaten_neu` WHERE `Genres` = '$button' ORDER BY RAND() LIMIT 3;";
                 $result = $conn->query($sql); 
-
+//Erstellen der Zeilen der Tabelle mit Daten aus der Datenbank
                 if ($result->num_rows > 0) {
 
                     while($row = $result->fetch_assoc()){
-                    
-                    echo '<tr>';
-                    
-                    echo '<td>'.$row['Titel'].'</td>';
-                    echo '<td>'.$row['Künstler'].'</td>';
-                    echo '<td>'.$row['Länge'].'</td>';
-                    echo '<td>'.$row['Online-Seit'].'</td>';
-                    echo '<td>'.$row['Quick-Link'].'</td>';
-                    echo '<td>'.$row['Genres'].'</td>';
-                    echo '<td>'.$row['Aufrufe bei Youtube Stand 10/05/22'].'</td>';
-                    echo '<td>'.$row['Likes Stand 10/05/22'].'</td>';
-                    
-                    echo '</tr>';
-                    
+                        echo '<tr>';
+                        echo '<td>'.$row['Titel'].'</td>';
+                        echo '<td>'.$row['Künstler'].'</td>';
+                        echo '<td>'.$row['Länge'].'</td>';
+                        echo '<td>'.$row['Online-Seit'].'</td>';
+                        echo "<td><a href=\"".$row['Quick-Link']."\">zu Youtube</a></td>"; 
+                        echo '<td>'.$row['Genres'].'</td>';
+                        echo '<td>'.$row['Aufrufe bei Youtube Stand 10/05/22'].'</td>';
+                        echo '<td>'.$row['Likes Stand 10/05/22'].'</td>';
+                        echo '</tr>';
                     }
                 } else {
                     echo "0 results";

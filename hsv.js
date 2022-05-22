@@ -20,7 +20,7 @@ switcherHSV.addEventListener('click', function() {
 
 function showTime(){
     var dateNow = new Date();
-    var date = new Date('2018-05-12T14:13:00');
+    var date = new Date('2018-05-12T17:37:00');
     var tage = Math.floor((date.getTime() - dateNow.getTime()) / (1000 * 60 * 60 * 24) * (-1));
     var stunden = Math.floor((date.getTime() - dateNow.getTime()) / (1000 * 60 * 60) * (-1)) - tage * 24;
     var minuten = Math.floor((date.getTime() - dateNow.getTime()) / (1000 * 60) * (-1)) - ((stunden + tage * 24) * 60);
